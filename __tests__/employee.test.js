@@ -5,8 +5,10 @@ describe("Toy", () => {
     describe("init", () => {
       it('should…', () => {
   
+        expect(child.name).toEqual("Sarah");  //might have to use toBe
       });
     });
+
     describe("purchase", () => {
       it('should…', () => {
   

@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+const ExpandPrompt = require("inquirer/lib/prompts/expand")
+
+const htmlBody = `<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,4 +11,6 @@
 <body>
     
 </body>
-</html>
+</html>`
+
+module.exports = HtmlBody;
