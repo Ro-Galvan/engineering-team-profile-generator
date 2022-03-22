@@ -1,6 +1,6 @@
-// create all 4 classes
+// create all 4 classes --DONE
 // export & import files accordingly --DONE
-// psudeo code:
+// psudeo code tests:
     // employee
     // engineer
     // intern
