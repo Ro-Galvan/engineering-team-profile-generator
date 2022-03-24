@@ -14,6 +14,26 @@ const htmlBody = `<!DOCTYPE html>
     <title>Document</title>
 </head>
 <body>
+
+    <h1> ${data.manager name}</h1>
+    <div>${data.ENTER EMPLOYEE TYPE}</div>
+    <div>${data.manager ID}</div>
+    <div>${data.manager email}</div>
+    <div>${data.manager officeNum}</div>
+
+
+    <h1> ${data.engineer name}</h1>
+    <div>${data.ENTER EMPLOYEE TYPE}</div>
+    <div>${data.engineer ID}</div>
+    <div>${data.engineer email}</div>
+    <div>${data.engineer engineer github username}</div>
+
+
+    <h1> ${data.intern name}</h1>
+    <div>${data.ENTER EMPLOYEE TYPE}</div>
+    <div>${data.intern ID}</div>
+    <div>${data.intern email}</div>
+    <div>${data.intern school}</div>
     
 </body>
 </html>`

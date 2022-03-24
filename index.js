@@ -18,36 +18,24 @@ const fs = require('fs');
 const managerQuestions = [
     {
         type: 'input',
-        name: 'ManagerName', // The name property is a must since it is used in the storing of answers
-        message: 'Please enter the manager name?'
+        name: 'manager name', // The name property is a must since it is used in the storing of answers
+        message: 'Please enter the manager\'s name:'
     },
     {
         type: 'input',
-        name: 'Manager ID', 
-        message: 'Please enter the manager\'s ID?'
+        name: 'manager ID', 
+        message: 'Please enter the manager\'s ID:'
     },
     {
         type: 'input',
-        name: 'Manager Email', 
-        message: 'Please enter the manager\'s email address?'
+        name: 'manager email', 
+        message: 'Please enter the manager\'s email address:'
     },
     {
         type: 'input',
-        name: 'Manager officeNum', 
-        message: 'Please enter the manager\'s office number?'
+        name: 'manager officeNum', 
+        message: 'Please enter the manager\'s office number:'
     },
-];
-const idAndEmailQuestions = [
-    {
-        type: 'input',
-        name: 'ID', 
-        message: 'Please enter the employee\'s ID?'
-    },
-    {
-        type: 'input',
-        name: 'Email', 
-        message: 'Please enter the employee\'s email address?'
-    }
 ];
 
 const optionToAddTeamMember = [
@@ -59,39 +47,73 @@ const optionToAddTeamMember = [
         
     }
 ];
-    
 
-// const getManagerQuestions = () => {
-//     inquirer.prompt(
-//         [
-//          {
-//              type: 'input',
-//              message: 'What is your/employee\'s office number?',
-//              name: 'Manager employee ID' 
-//          },
-//          {type: 'rawlist',
-//     message: 'What is your team manager\'s name?',
-//     name: 'Manager name' 
-// },
-//  ])}
+const engineerQuestions = [
+    {
+        type: 'input',
+        name: 'engineer name', 
+        message: 'Please enter the engineer\'s name:'
+    },
+    {
+        type: 'input',
+        name: 'engineer ID', 
+        message: 'Please enter the engineer\'s ID:'
+    },
+    {
+        type: 'input',
+        name: 'engineer email', 
+        message: 'Please enter the engineer\'s email address:'
+    },
+    {
+        type: 'input',
+        name: 'engineer github username', 
+        message: 'Please enter the engineer\'s github username:'
+    },
+];
+const internQuestions = [
+    {
+        type: 'input',
+        name: 'intern name', 
+        message: 'Please enter the intern\'s name:'
+    },
+    {
+        type: 'input',
+        name: 'intern ID', 
+        message: 'Please enter the intern\'s ID:'
+    },
+    {
+        type: 'input',
+        name: 'intern email', 
+        message: 'Please enter the intern\'s email address:'
+    },
+    {
+        type: 'input',
+        name: 'intern school', 
+        message: 'Please enter the intern\'s school name:'
+    },
+];
+
 
 
  // function to initialize app
 function init() {
     inquirer.prompt(
     [
-        ...generalEmployeeQuestions,
+        ...managerQuestions,
         ...optionToAddTeamMember,   
+        ...engineerQuestions,
+        ...optionToAddTeamMember,
+        ...internQuestions,
+        ...optionToAddTeamMember,
     ]
     ).then((answers) => {
-        console.log(answers);
+        console.log(answers);  //managerQuestions, engineerQuestions, internQuestion
       })
     };
 
 // console.log(questions);
 
-// function writeToFile(fileName, data) { //ppparameters
-//     // err catch taken from activity 13 line 15-16
+// function writeToFile(fileName, data) { //parameters
 //    fs.writeFile(fileName, data, (err) => {
 //        err ? console.error(err) : console.log('Success!');  //is this the promise?
 //                // fs.writeFile('./dist/README.md', data, (err) => {
