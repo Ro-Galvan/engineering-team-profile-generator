@@ -5,7 +5,8 @@ const Engineer = require('../lib/engineer');
 const Intern = require('../lib/intern');
 const Manager = require('../lib/manager');
 
-const htmlBody = `<!DOCTYPE html>
+function generateHTML(data) {
+return `<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -14,28 +15,28 @@ const htmlBody = `<!DOCTYPE html>
     <title>Document</title>
 </head>
 <body>
+<section></section>
+    <h1> ${data.managerName}</h1>
+    <div>${data.ENTEREMPLOYEETYPE}</div>
+    <div>${data.managerID}</div>
+    <div>${data.managerEmail}</div>
+    <div>${data.managerOfficeNum}</div>
 
-    <h1> ${data.manager name}</h1>
-    <div>${data.ENTER EMPLOYEE TYPE}</div>
-    <div>${data.manager ID}</div>
-    <div>${data.manager email}</div>
-    <div>${data.manager officeNum}</div>
+<section></section>
+    <h1> ${data.engineerName}</h1>
+    <div>${data.ENTEREMPLOYEETYPE}</div>
+    <div>${data.engineerID}</div>
+    <div>${data.engineerEmail}</div>
+    <div>${data.engineerGithubUsername}</div>
 
-
-    <h1> ${data.engineer name}</h1>
-    <div>${data.ENTER EMPLOYEE TYPE}</div>
-    <div>${data.engineer ID}</div>
-    <div>${data.engineer email}</div>
-    <div>${data.engineer engineer github username}</div>
-
-
-    <h1> ${data.intern name}</h1>
-    <div>${data.ENTER EMPLOYEE TYPE}</div>
-    <div>${data.intern ID}</div>
-    <div>${data.intern email}</div>
-    <div>${data.intern school}</div>
+<section></section>
+    <h1> ${data.internName}</h1>
+    <div>${data.ENTEREMPLOYEETYPE}</div>
+    <div>${data.internID}</div>
+    <div>${data.internEmail}</div>
+    <div>${data.internSchool}</div>
     
 </body>
 </html>`
-
-module.exports = HtmlBody;
+};
+module.exports = generateHTML;
