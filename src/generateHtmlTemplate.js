@@ -10,36 +10,50 @@ const Manager = require('../lib/manager');
 
 function generateHTML(data) {
 
-return `<!DOCTYPE html>
+    return `<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team Profile Generator</title>
-</head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="../dist/style.css">
+    </head>
 <body>
 <header>My Team</header>
-<section></section>
-    <h1> ${data.managerName}</h1>
-    <h3>Manager</h3>
-    <div>${data.managerID}</div>
-    <div>${data.managerEmail}</div>
-    <div>${data.managerOfficeNum}</div>
-<section></section>
-    <h1> ${data.engineerName}</h1>
-    <h3>Engineer</h3>
-    <div>${data.engineerID}</div>
-    <div>${data.engineerEmail}</div>
-    <div>${data.engineerGithubUsername}</div>
 
-<section></section>
-    <h1> ${data.internName}</h1>
-    <h3>Intern</h3>
-    <div>${data.internID}</div>
-    <div>${data.internEmail}</div>
-    <div>${data.internSchool}</div>
-<script src="."></script>   
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+        <h5 class="card-title">${data.managerName}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Manager</h6>
+        <div>${data.managerID}</div>
+        <a href="#" class="card-link">${data.managerEmail}</a>
+        <div>${data.managerOfficeNum}</div>
+    </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+        <h5 class="card-title">${data.engineerName}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Engineer</h6>
+        <div>${data.engineerID}</div>
+        <a href="#" class="card-link">${data.engineerEmail}</a>
+        <a href="#" class="card-link">${data.engineerGithubUsername}</a> 
+    </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">${data.internName}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Intern</h6> 
+        <div>${data.internID}</div>
+        <a href="#" class="card-link">${data.internEmail}</a>
+        <div>${data.internSchool}</div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
 </body>
 </html>`
 };
