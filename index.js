@@ -8,7 +8,12 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 
 //importing the generate html template file
-const HtmlBody = require('./src/generateHtmlTemplate');
+const generateHTML = require('./src/generateHtmlTemplate');
+
+const Employee = require('./lib/employee');
+const Engineer = require('./lib/engineer');
+const Intern = require('./lib/intern');
+const Manager = require('./lib/manager');
 
 // const init = () => {  //we dont want to write any code in global scope or easy to get lost
 
@@ -18,22 +23,22 @@ const HtmlBody = require('./src/generateHtmlTemplate');
 const managerQuestions = [
     {
         type: 'input',
-        name: 'manager Name', // The name property is a must since it is used in the storing of answers
+        name: 'managerName', // The name property is a must since it is used in the storing of answers
         message: 'Please enter the manager\'s name:'
     },
     {
         type: 'input',
-        name: 'manager ID',
+        name: 'managerID',
         message: 'Please enter the manager\'s ID:'
     },
     {
         type: 'input',
-        name: 'manager Email',
+        name: 'managerEmail',
         message: 'Please enter the manager\'s email address:'
     },
     {
         type: 'input',
-        name: 'manager Office Num',
+        name: 'managerOfficeNum',
         message: 'Please enter the manager\'s office number:'
     },
 ];
@@ -41,7 +46,7 @@ const managerQuestions = [
 const optionToAddTeamMember = [
     {
         type: 'list',
-        name: 'add member',
+        name: 'addmember',
         message: 'Would you like to add another team member?',
         choices: ['add an engineer', 'add an intern', 'finished']
     },
@@ -50,48 +55,66 @@ const optionToAddTeamMember = [
 const engineerQuestions = [
     {
         type: 'input',
-        name: 'engineer Name',
+        name: 'engineerName',
         message: 'Please enter the engineer\'s name:'
     },
     {
         type: 'input',
-        name: 'engineer ID',
+        name: 'engineerID',
         message: 'Please enter the engineer\'s ID:'
     },
     {
         type: 'input',
-        name: 'engineer Email',
+        name: 'engineerEmail',
         message: 'Please enter the engineer\'s email address:'
     },
     {
         type: 'input',
-        name: 'engineer Github Username',
+        name: 'engineerGithubUsername',
         message: 'Please enter the engineer\'s github username:'
     },
 ];
+
+const optionToAddTeamMember2 = [
+    {
+        type: 'list',
+        name: 'addmember2',
+        message: 'Would you like to add another team member?',
+        choices: ['add an engineer', 'add an intern', 'finished']
+    },
+];
+
 const internQuestions = [
     {
         type: 'input',
-        name: 'intern Name',
+        name: 'internName',
         message: 'Please enter the intern\'s name:'
     },
     {
         type: 'input',
-        name: 'intern ID',
+        name: 'internID',
         message: 'Please enter the intern\'s ID:'
     },
     {
         type: 'input',
-        name: 'intern Email',
+        name: 'internEmail',
         message: 'Please enter the intern\'s email address:'
     },
     {
         type: 'input',
-        name: 'intern School',
+        name: 'internSchool',
         message: 'Please enter the intern\'s school name:'
     },
 ];
 
+const optionToAddTeamMember3 = [
+    {
+        type: 'list',
+        name: 'addmember3',
+        message: 'Would you like to add another team member?',
+        choices: ['add an engineer', 'add an intern', 'finished']
+    },
+];
 
 
 // function to initialize app
@@ -101,12 +124,14 @@ function init() {
             ...managerQuestions,
             ...optionToAddTeamMember,
             ...engineerQuestions,
-            ...optionToAddTeamMember,
+            ...optionToAddTeamMember2,
             ...internQuestions,
-            ...optionToAddTeamMember,
+            ...optionToAddTeamMember3,
         ]
     ).then((answers) => {
-        console.log(answers);  //managerQuestions, engineerQuestions, internQuestion
+       writeToFile('myhtml.html', generateHTML(answers))
+        console.log('answers', generateHTML(answers));  
+        //managerQuestions, engineerQuestions, internQuestion
         // return managerQuestions, engineerQuestions, internQuestion
     })
 };
@@ -117,7 +142,7 @@ function writeToFile(fileName, data) { //parameters
         err ? console.error(err) : console.log('Success!');
         fs.writeFile('./dist/index.html', data, (err) => {
             // console.log(fileName);
-            // console.log(data);
+            console.log('file data', data);
         })
     });
 };
