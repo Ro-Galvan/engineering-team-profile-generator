@@ -1,43 +1,29 @@
 # engineering-team-profile-generator
 
-# nifty-notetaker
-
 # Description
-  The client side was already setup and I had to make the server talk to the client by doing a GET and POST request for the application. This is a note application that allows business owners to take notes throughout the day. 
+  I wrote a Node.js command-line application that takes in information about employees on a software engineering team, then generates an HTML webpage that displays summaries for each person. I also wrote 4 unit tests for 4 classes located in the library directory.
 
 
-[link to GitHub repository](https://github.com/Ro-Galvan/nifty-notetaker)
+[link to GitHub repository](https://github.com/Ro-Galvan/engineering-team-profile-generator)
 
 # Table of Contents
   - [Installation](#installation)
   - [Usage](#usage)
-  - [Credits](#credits)
-  - [How to Contribute](#how-to-contribute)
   - [Tests](#tests)
   - [License](#license)
-  - [Badges](#badges)
   - [Questions](#questions)
 # Installation
   Follow the below steps: 
-    Install inquirer and jest. Once you are in index.js file run node index.js in the terminal.
+    Install inquirer and jest packages. For the application, once you are in index.js file type node index.js in the terminal.
 # Usage
-  ![Website Overview](./)
-# Credits
-  No
-# How to Contribute
-  undefined
+  ![Demo Video](./)
 # Tests
-  N/A
+ To run the tests type npm test in the terminal. You will then see how many of the 4 tests passed/failed.The tests were written against the Employee, Manager, Engineer, and Intern classes.
 # License
-  mit
-# Badges
-  No
+  MIT
 # Questions
 Link to my github:
   https://github.com/Ro-Galvan
  
   Contact me:
   https://www.linkedin.com/in/rocio-galvan/ 
- 
-  Contact me:
-  N/A
