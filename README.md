@@ -19,6 +19,10 @@
     Install inquirer and jest packages. For the application, once you are in index.js file type node index.js in the terminal.
 # Usage
   [Demo Video](https://www.awesomescreenshot.com/video/8108032?key=966fff06eeb32d2ed70df06d64837c24)
+
+https://user-images.githubusercontent.com/97912154/160484431-fce1fad9-6b6f-4440-af58-f66b3ce66ab9.mp4
+
+
 # Tests
  To run the tests type npm test in the terminal. You will then see how many of the 4 tests passed/failed.The tests were written against the Employee, Manager, Engineer, and Intern classes.
 # License
