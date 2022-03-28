@@ -23,34 +23,46 @@ function generateHTML(data) {
 <body>
 <header>My Team</header>
 
-<div class="card" style="width: 18rem;">
-  <div class="card-body">
-        <h5 class="card-title">${data.managerName}</h5>
-        <h6 class="card-subtitle mb-2 text-muted">Manager</h6>
-        <div>${data.managerID}</div>
-        <a href="#" class="card-link">${data.managerEmail}</a>
-        <div>${data.managerOfficeNum}</div>
-    </div>
-</div>
+<div class="container mt-5">
+<div class="row justify-content-evenly">
+        <div class="col-md-4">
+        <div class="card" style="width: 25rem;">
+        <div class="card-body">
+            <h5 class="card-title">${data.managerName}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Manager</h6>
+            <div>ID: ${data.managerID}</div>
+            <div>Email: <a href="mailto:${data.managerEmail}?" class="card-link">${data.managerEmail}</a></div>
+            <div>Office Number: ${data.managerOfficeNum}</div>
+        </div>
+        </div>
+        </div>
 
-<div class="card" style="width: 18rem;">
-  <div class="card-body">
+
+
+    <div class="col-md-4">
+    <div class="card" style="width: 25rem;">
+    <div class="card-body">
         <h5 class="card-title">${data.engineerName}</h5>
         <h6 class="card-subtitle mb-2 text-muted">Engineer</h6>
-        <div>${data.engineerID}</div>
-        <a href="#" class="card-link">${data.engineerEmail}</a>
-        <a href="#" class="card-link">${data.engineerGithubUsername}</a> 
+        <div>ID: ${data.engineerID}</div>
+        <div>Email: <a href = "mailto:${data.engineerEmail}?" class="card-link">${data.engineerEmail}</a></div>
+        <div>Github: <a href="https://github.com/Ro-Galvan" class="card-link">https://github.com/${data.engineerGithubUsername}</a></div> 
     </div>
-</div>
+    </div>
+    </div>
 
-<div class="card" style="width: 18rem;">
+    <div class="col-md-4">
+    <div class="card" style="width: 25rem;">
     <div class="card-body">
         <h5 class="card-title">${data.internName}</h5>
         <h6 class="card-subtitle mb-2 text-muted">Intern</h6> 
-        <div>${data.internID}</div>
-        <a href="#" class="card-link">${data.internEmail}</a>
-        <div>${data.internSchool}</div>
+        <div>ID: ${data.internID}</div>
+        <div>Email: <a href="mailto:${data.internEmail}?"class="card-link">${data.internEmail}</a></div>
+        <div>School: ${data.internSchool}</div>
     </div>
+    </div>
+    </div>
+</div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
