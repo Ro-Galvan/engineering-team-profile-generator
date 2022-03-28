@@ -1,7 +1,3 @@
-// create questions 
-// create html
-// using bootstrap style the cards
-
 // importing the package/module: inquirer
 const inquirer = require('inquirer');
 // importing the package/module: fs -file system
@@ -9,16 +5,6 @@ const fs = require('fs');
 
 //importing the generate html template file
 const generateHTML = require('./src/generateHtmlTemplate');
-
-const Employee = require('./lib/employee');
-const Engineer = require('./lib/engineer');
-const Intern = require('./lib/intern');
-const Manager = require('./lib/manager');
-
-// const init = () => {  //we dont want to write any code in global scope or easy to get lost
-
-// };
-// init();
 
 const managerQuestions = [
     {
@@ -131,13 +117,11 @@ function init() {
     ).then((answers) => {
        writeToFile('myhtml.html', generateHTML(answers))
         console.log('answers', generateHTML(answers));  
-        //managerQuestions, engineerQuestions, internQuestion
-        // return managerQuestions, engineerQuestions, internQuestion
     })
 };
 
 
-function writeToFile(fileName, data) { //parameters
+function writeToFile(fileName, data) { 
     fs.writeFile(fileName, data, (err) => {
         err ? console.error(err) : console.log('Success!');
         fs.writeFile('./dist/index.html', data, (err) => {

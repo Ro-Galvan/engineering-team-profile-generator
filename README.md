@@ -6,6 +6,8 @@
 
 [link to GitHub repository](https://github.com/Ro-Galvan/engineering-team-profile-generator)
 
+[Demo Video](https://www.awesomescreenshot.com/video/8108032?key=966fff06eeb32d2ed70df06d64837c24)
+
 # Table of Contents
   - [Installation](#installation)
   - [Usage](#usage)
@@ -16,7 +18,7 @@
   Follow the below steps: 
     Install inquirer and jest packages. For the application, once you are in index.js file type node index.js in the terminal.
 # Usage
-  ![Demo Video](./)
+  [Demo Video](https://www.awesomescreenshot.com/video/8108032?key=966fff06eeb32d2ed70df06d64837c24)
 # Tests
  To run the tests type npm test in the terminal. You will then see how many of the 4 tests passed/failed.The tests were written against the Employee, Manager, Engineer, and Intern classes.
 # License
